@@ -30,6 +30,7 @@ public class StreamDemo3 {
         // limit 使用, 主要用于无限流
         new Random().ints().filter(i -> i > 100 && i < 1000).limit(10)
                 .forEach(System.out::println);
+
     }
 
 
