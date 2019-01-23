@@ -5,17 +5,17 @@ package com.fanxl.data.structure.array;
  * @author: fanxl
  * @date: 2019/1/23 0023 21:31
  */
-public class Array {
+public class Array<T> {
 
     /**
      * 数组的元素个数
      */
     private int size;
 
-    private int[] data;
+    private T[] data;
 
     public Array(int capacity) {
-        data = new int[capacity];
+        data = (T[]) new Object[capacity];
         size = 0;
     }
 
@@ -39,15 +39,15 @@ public class Array {
         return size == 0;
     }
 
-    public void addLast(int e) {
+    public void addLast(T e) {
         add(size, e);
     }
 
-    public void addFirst(int e) {
+    public void addFirst(T e) {
         add(0, e);
     }
 
-    public void add(int index, int e) {
+    public void add(int index, T e) {
         if (size == data.length) {
             throw new IllegalArgumentException("add failed. Array is full.");
         }
@@ -61,56 +61,57 @@ public class Array {
         size ++;
     }
 
-    public int get(int index) {
+    public T get(int index) {
         if (index <0 || index >= size) {
             throw new IllegalArgumentException("Get failed. index is illegal.");
         }
         return data[index];
     }
 
-    public void set(int index, int e) {
+    public void set(int index, T e) {
         if (index <0 || index >= size) {
             throw new IllegalArgumentException("Get failed. index is illegal.");
         }
         data[index] = e;
     }
 
-    public boolean contains(int e) {
+    public boolean contains(T e) {
         for (int i=0; i< size; i++) {
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 return true;
             }
         }
         return false;
     }
 
-    public int remove(int index) {
-        int temp = get(index);
+    public T remove(int index) {
+        T temp = get(index);
         for (int i=index; i<size; i++) {
             data[i] = data[i+1];
         }
         size--;
+        data[size] = null;
         return temp;
     }
 
-    public int removeFirst() {
+    public T removeFirst() {
         return remove(0);
     }
 
-    public int removeLast() {
+    public T removeLast() {
         return remove(size - 1);
     }
 
-    public void removeElement(int e) {
+    public void removeElement(T e) {
         int index = find(e);
         if (index != -1) {
             remove(index);
         }
     }
 
-    public int find(int e) {
+    public int find(T e) {
         for (int i=0; i< size; i++) {
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 return i;
             }
         }

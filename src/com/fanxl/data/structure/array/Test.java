@@ -8,7 +8,7 @@ package com.fanxl.data.structure.array;
 public class Test {
 
     public static void main(String[] args) {
-        Array array = new Array();
+        Array<Integer> array = new Array<>();
         array.addLast(10);
         array.addLast(1);
         array.addLast(3);
