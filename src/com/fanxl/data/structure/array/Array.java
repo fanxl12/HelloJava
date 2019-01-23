@@ -48,17 +48,25 @@ public class Array<T> {
     }
 
     public void add(int index, T e) {
-        if (size == data.length) {
-            throw new IllegalArgumentException("add failed. Array is full.");
-        }
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("add failed. required index >=0 and index <=size.");
+        }
+        if (size == data.length) {
+            resize(2 * data.length);
         }
         for (int i = size; i > index; i--) {
             data[i] = data[i-1];
         }
         data[index] = e;
         size ++;
+    }
+
+    private void resize(int capacity) {
+        T[] newArray = (T[]) new Object[capacity];
+        for (int i = 0 ; i < size; i++) {
+            newArray[i] = data[i];
+        }
+        data = newArray;
     }
 
     public T get(int index) {
@@ -86,11 +94,16 @@ public class Array<T> {
 
     public T remove(int index) {
         T temp = get(index);
-        for (int i=index; i<size; i++) {
-            data[i] = data[i+1];
+        for (int i=index + 1; i<size; i++) {
+            data[i - 1] = data[i];
         }
         size--;
         data[size] = null;
+
+        if (size == data.length / 2) {
+            resize(data.length / 2);
+        }
+
         return temp;
     }
 

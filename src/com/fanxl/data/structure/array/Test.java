@@ -9,15 +9,16 @@ public class Test {
 
     public static void main(String[] args) {
         Array<Integer> array = new Array<>();
-        array.addLast(10);
-        array.addLast(1);
-        array.addLast(3);
-        array.addLast(9);
-        array.add(2, 5);
+        for (int i =0; i < 9; i++) {
+            array.addLast(i);
+        }
+        System.out.println(array.toString());
+        array.addLast(100);
+        array.addLast(120);
         System.out.println(array.toString());
         array.remove(2);
         System.out.println(array.toString());
-        array.removeElement(9);
+        array.removeElement(7);
         System.out.println(array.toString());
     }
 
