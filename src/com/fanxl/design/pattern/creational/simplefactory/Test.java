@@ -11,6 +11,7 @@ public class Test {
         VideoFactory factory = new VideoFactory();
         Video video = factory.getVideo(JavaVideo.class);
         video.make();
+
     }
 
 }

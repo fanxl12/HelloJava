@@ -25,5 +25,14 @@ public class VideoFactory {
         return video;
     }
 
+    public Video getVideo1(String type) {
+        if (type.equalsIgnoreCase("java")) {
+            return new JavaVideo();
+        } else if (type.equalsIgnoreCase("python")) {
+            return new PythonVideo();
+        }
+        return null;
+    }
+
 
 }
