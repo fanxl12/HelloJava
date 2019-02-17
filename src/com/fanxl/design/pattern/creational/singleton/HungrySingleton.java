@@ -9,6 +9,12 @@ import java.io.Serializable;
  */
 public class HungrySingleton implements Serializable {
 
+    private HungrySingleton() {
+        if (hungrySingleton != null) {
+            throw new IllegalArgumentException("单例构造器禁止反射调用");
+        }
+    }
+
     private final static HungrySingleton hungrySingleton;
 
     static {

@@ -8,7 +8,11 @@ package com.fanxl.design.pattern.creational.singleton;
  */
 public class StaticInnerClassSingleton {
 
-    private StaticInnerClassSingleton() {}
+    private StaticInnerClassSingleton() {
+        if (InnerClass.staticInnerClassSingleton != null) {
+            throw new IllegalArgumentException("单例构造器禁止反射调用");
+        }
+    }
 
     private static class InnerClass {
         private static StaticInnerClassSingleton staticInnerClassSingleton = new StaticInnerClassSingleton();
