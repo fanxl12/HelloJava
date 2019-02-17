@@ -28,14 +28,22 @@ public class Test {
 
 
 //        Class objectClass = HungrySingleton.class;
-        Class objectClass = StaticInnerClassSingleton.class;
-        Constructor constructor = objectClass.getDeclaredConstructor();
-        constructor.setAccessible(true);
+//        Class objectClass = StaticInnerClassSingleton.class;
+//        Constructor constructor = objectClass.getDeclaredConstructor();
+//        constructor.setAccessible(true);
 
 //        HungrySingleton newInstance = (HungrySingleton) constructor.newInstance();
 //        HungrySingleton instance = HungrySingleton.getInstance();
-        StaticInnerClassSingleton newInstance = (StaticInnerClassSingleton) constructor.newInstance();
-        StaticInnerClassSingleton instance = StaticInnerClassSingleton.getInstance();
+//        StaticInnerClassSingleton newInstance = (StaticInnerClassSingleton) constructor.newInstance();
+//        StaticInnerClassSingleton instance = StaticInnerClassSingleton.getInstance();
+
+
+        Class objectClass = EnumInstance.class;
+        Constructor constructor = objectClass.getDeclaredConstructor(String.class, int.class);
+        constructor.setAccessible(true);
+
+        EnumInstance newInstance = (EnumInstance) constructor.newInstance("fanxl", 12);
+        EnumInstance instance = EnumInstance.INSTANCE;
 
         System.out.println(instance);
         System.out.println(newInstance);
