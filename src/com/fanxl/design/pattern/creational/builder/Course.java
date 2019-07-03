@@ -1,7 +1,7 @@
 package com.fanxl.design.pattern.creational.builder;
 
 /**
- * @description
+ * @description 产品角色
  * @author: fanxl
  * @date: 2019/2/15 0015 17:30
  */
