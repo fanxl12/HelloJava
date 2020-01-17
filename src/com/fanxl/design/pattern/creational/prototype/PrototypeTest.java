@@ -2,7 +2,7 @@ package com.fanxl.design.pattern.creational.prototype;
 
 /**
  * @author fanxl12
- * @description
+ * @description 原型模式
  * @date 2019/7/4 10:34
  */
 public class PrototypeTest {
