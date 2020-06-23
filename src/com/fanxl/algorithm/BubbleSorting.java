@@ -8,10 +8,10 @@ package com.fanxl.algorithm;
 public class BubbleSorting {
 
     public static void main(String[] args) {
-        int[] nums = {5, 2, 3, 1};
+        int[] nums = {5, 11, 8, 1, 4, 6, 3, 0, 2, 7, 9};
         int[] nums2 = {5, 4, 3, 1};
         BubbleSorting sb = new BubbleSorting();
-        int[] result = sb.sortArray(nums2);
+        int[] result = sb.sortArray(nums);
         sb.getResult(result);
     }
 
