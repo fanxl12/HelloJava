@@ -1,7 +1,7 @@
 package com.fanxl.design.pattern.structural.facade;
 
 /**
- * @description
+ * @description 外观模式的实现类，内部完成一系列操作，只对外提供一个服务接口
  * @author: fanxl
  * @date: 2020/7/5 0005 21:10
  */
