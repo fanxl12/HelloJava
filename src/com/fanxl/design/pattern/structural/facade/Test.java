@@ -1,7 +1,7 @@
 package com.fanxl.design.pattern.structural.facade;
 
 /**
- * @description
+ * @description 外观模式
  * @author: fanxl
  * @date: 2020/7/5 0005 21:10
  */

@@ -1,6 +1,7 @@
 package com.fanxl.design.pattern.structural.decorator.v2;
 
 /**
+ *
  * Created by geely
  */
 public class Test {
