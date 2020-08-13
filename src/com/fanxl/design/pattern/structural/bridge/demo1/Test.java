@@ -1,5 +1,10 @@
 package com.fanxl.design.pattern.structural.bridge.demo1;
 
+/**
+ * @description 桥接模式 案例1
+ * @author: fanxl
+ * @date: 2020/8/13 0013 21:53
+ */
 public class Test {
 
     public static void main(String[] args) {

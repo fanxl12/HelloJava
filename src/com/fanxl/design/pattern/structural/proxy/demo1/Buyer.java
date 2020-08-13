@@ -19,6 +19,6 @@ public class Buyer implements IBuyer{
 
     @Override
     public void bugTicket() {
-        System.out.println(name + " 正在购票");
+        System.out.println("正在购买" + name);
     }
 }
