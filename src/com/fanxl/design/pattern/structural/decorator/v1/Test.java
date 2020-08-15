@@ -1,7 +1,7 @@
 package com.fanxl.design.pattern.structural.decorator.v1;
 
 /**
- * Created by geely
+ * Created by geely 装饰者模式 通过继承关系实现
  */
 public class Test {
     public static void main(String[] args) {

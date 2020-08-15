@@ -4,7 +4,7 @@ import com.fanxl.design.pattern.structural.adapter.demo1.Ps2;
 import com.fanxl.design.pattern.structural.adapter.demo1.Usb;
 
 /**
- * @description
+ * @description 对象适配器（使用委托）
  * @author: fanxl
  * @date: 2020/8/13 0013 22:24
  */

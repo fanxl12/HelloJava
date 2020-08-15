@@ -3,6 +3,7 @@ package com.fanxl.design.pattern.structural.adapter.demo1;
 /**
  * @description 适配器模式 类适配器模式
  * 原理：通过继承来实现适配器功能
+ * 把usb 适配成了 ps2
  * @author: fanxl
  * @date: 2020/8/13 0013 22:21
  */

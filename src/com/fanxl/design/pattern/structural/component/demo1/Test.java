@@ -1,5 +1,10 @@
 package com.fanxl.design.pattern.structural.component.demo1;
 
+/**
+ * @description 组合模式
+ * @author: fanxl
+ * @date: 2020/8/15 0015 9:53
+ */
 public class Test {
 
     public static void main(String[] args) {

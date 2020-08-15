@@ -1,7 +1,7 @@
 package com.fanxl.design.pattern.structural.decorator.v2;
 
 /**
- *
+ * 装饰器模式 在原有基础上进行装饰，来添加新的功能
  * Created by geely
  */
 public class Test {
