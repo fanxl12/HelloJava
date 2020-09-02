@@ -1,5 +1,7 @@
 package com.fanxl.design.pattern.structural.adapter.demo1;
 
+import java.util.UUID;
+
 /**
  * @description 适配器模式 类适配器模式
  * 原理：通过继承来实现适配器功能
@@ -12,6 +14,9 @@ public class Test {
     public static void main(String[] args) {
         Ps2 ps2 = new Adapter();
         ps2.isPs2();
+
+        System.out.println(UUID.randomUUID().toString().replace("-", ""));
+
     }
 
 }
