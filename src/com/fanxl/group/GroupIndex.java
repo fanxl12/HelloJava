@@ -6,6 +6,10 @@ public class GroupIndex {
 
     private int end;
 
+    public int getNumber() {
+        return end - start;
+    }
+
     public GroupIndex(int start, int end) {
         this.start = start;
         this.end = end;
