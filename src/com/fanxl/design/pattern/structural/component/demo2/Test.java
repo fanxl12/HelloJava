@@ -1,25 +1,36 @@
 package com.fanxl.design.pattern.structural.component.demo2;
 
-/**
- * @description
- * @author: fanxl
- * @date: 2020/8/15 0015 17:20
- */
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Test {
 
-    public static void main(String[] args) {
-        CatalogComponent linux = new Course("Linux课程", 12);
-        CatalogComponent windows = new Course("Windows课程", 23);
+    public static void main(String[] args) throws Exception {
+        // 创建根节点及其子节点
+        Composite root = new Composite("综合实验室");
+        root.add(new Leaf("综合设备1"));
+        root.add(new Leaf("综合设备2"));
 
-        CatalogComponent javaCatalog = new CourseCatalog("Java", 2);
-        javaCatalog.add(new Course("Spring", 12.6));
-        javaCatalog.add(new Course("Mybatis", 16.6));
+        // 创建二级节点及其子节点
+        Composite branchLevel21 = new Composite("化学实验室");
+        branchLevel21.add(new Leaf("试管"));
+        branchLevel21.add(new Leaf("烧杯"));
+        branchLevel21.add(new Leaf("锥形瓶"));
+        root.add(branchLevel21);
 
-        CatalogComponent mook = new CourseCatalog("Mook网", 1);
-        mook.add(linux);
-        mook.add(windows);
-        mook.add(javaCatalog);
-        mook.print();
+        // 并列的二级节点
+        Composite branchLevel22 = new Composite("物理实验室");
+        branchLevel22.add(new Leaf("单刀单至开关设备"));
+        branchLevel22.add(new Leaf("电磁箱"));
+
+        Composite branchLevel221 = new Composite("精密仪器实验组");
+        branchLevel221.add(new Leaf("精密光学测量仪"));
+        branchLevel221.add(new Leaf("精密机床"));
+        branchLevel22.add(branchLevel221);
+
+        root.add(branchLevel22);
+
+        root.display(1);
     }
 
 }
