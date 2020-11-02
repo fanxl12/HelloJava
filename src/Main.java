@@ -1,19 +1,19 @@
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        String fileName = "123";
-        int index = fileName.lastIndexOf(".");
-        if (index == -1) {
-            throw new Exception("文件名称无后缀信息");
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
+        int next = 0;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == 5) {
+                next = i + 1;
+                break;
+            }
         }
-        String fileSuffix = fileName.substring(index+1);
-        if (fileSuffix == null || fileSuffix.length() == 0) {
-            throw new Exception("文件名称无后缀信息");
+        if (next < list.size()) {
+            System.out.printf("结果:" + list.get(next));
         }
-        System.out.println("fileSuffix:" + fileSuffix);
-        System.out.println("fileName:" + fileName.substring(0, index));
-        String url = "http://192.168.50.60:8072/guide";
-        System.out.println(url.substring(0, url.lastIndexOf(":")));
     }
 }
